@@ -1,0 +1,276 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  min-height: 80vh;
+}
+/* navbar styling */
+.navbar {
+  background-color: white;
+}
+
+.fa-compass {
+  color: #e51d53;
+  font-size: 1.5rem;
+}
+.nav-link {
+  color: black !important;
+}
+
+/* footer styling */
+
+.f-div-wrap {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+  border-top: 0.1px solid rgb(48, 47, 47);
+  margin-top: 3rem;
+}
+.f-div-wrap div a {
+  text-decoration: none;
+  margin-left: 0.8rem;
+  color: black;
+}
+.f-info {
+  display: flex;
+}
+.f-logo {
+  display: flex;
+}
+.f-logo i {
+  font-size: 1.2rem;
+  margin: 0.7rem;
+}
+.f-logo i:hover {
+  transform: scale(1.3);
+}
+
+/* home listing */
+
+.card {
+  border: none !important;
+  margin-bottom: 2rem;
+}
+
+.card-box-responsive {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card-box {
+  border-radius: 2rem;
+  width: 25rem;
+  height: 27rem;
+  margin-top: 1rem;
+}
+.card-box:hover {
+  transition: 0.2s;
+  opacity: 0.8;
+}
+
+.card-box img {
+  width: 100%;
+  height: 22rem;
+  border-radius: 1.1rem;
+  object-fit: cover;
+}
+.card-heading {
+  color: rgb(225, 104, 104);
+}
+.card-box-content {
+  padding: 0.6rem;
+}
+
+/* individual listing */
+
+.show-card-img {
+  height: 25rem;
+  width: 50rem;
+  border-radius: 1.5rem;
+}
+
+/* review card */
+
+.reveiw-card {
+  border: 2px solid grey !important;
+  border-radius: 1.5rem;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #dec6cd;
+  color: black;
+}
+
+/* home page icon section */
+
+.filters {
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+}
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+.filter p {
+  font-size: 0.8rem;
+}
+.filter:hover {
+  transition: 0.3s;
+  opacity: 1;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.tax-toggler {
+  border: 1.5px solid black;
+  border-radius: 2rem;
+  margin-left: 5rem;
+  height: 3rem;
+  margin-top: 1.6rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+}
+.tax-info {
+  display: none;
+}
+
+/* responsiveness for tablet */
+@media screen and (width <=1300px) {
+  /* home listing */
+
+  .filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1.7rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+  }
+
+  .tax-toggler {
+    border: 1.8px solid black;
+    border-radius: 2rem;
+    margin-left: 3rem;
+    height: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1.5rem 0.3rem 1.5rem;
+  }
+  /* CARDS STYLING HOME PAGE */
+  .card-box-responsive {
+    display: flex;
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+  }
+
+  .card-box {
+    border-radius: 2rem;
+    width: 21rem;
+    height: 27rem;
+    margin-top: 1rem;
+  }
+
+  .card-box img {
+    width: 100%;
+    height: 21rem;
+    border-radius: 1.8rem;
+    object-fit: cover;
+  }
+
+  .card-box-content {
+    padding: 0.9rem;
+  }
+}
+
+/* responsivness for mobile */
+
+@media screen and (max-width: 500px) {
+  /* home listing */
+
+  .filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+  }
+
+  .tax-toggler {
+    border: 1.8px solid black;
+    border-radius: 2rem;
+    margin-left: 3rem;
+    height: 3rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1.5rem 0.3rem 1.5rem;
+  }
+  /* footer styling */
+
+  .f-div-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+  .f-div-wrap div a {
+    text-decoration: none;
+    /* margin-left: 0.1rem; */
+    color: black;
+  }
+  .f-info {
+    display: flex;
+  }
+  .f-info div {
+    font-size: 0.8rem;
+    margin-left: 0.9rem;
+  }
+  .f-logo {
+    display: flex;
+    margin-top: 1.7rem;
+  }
+  .f-logo i {
+    font-size: 1.2rem;
+  }
+
+  /* CARDS STYLING HOME PAGE */
+  .card-box-responsive {
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card-box {
+    border-radius: 2rem;
+    width: 23rem;
+    height: 27rem;
+    margin-top: 1rem;
+  }
+
+  .card-box img {
+    width: 100%;
+    height: 22rem;
+    border-radius: 1.8rem;
+    object-fit: cover;
+  }
+
+  .card-box-content {
+    padding: 0.9rem;
+  }
+}
