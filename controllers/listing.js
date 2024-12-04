@@ -1,15 +1,16 @@
 const expressError = require("../utils/expressError.js");
 const Listing = require("../model/listing.js");
 
+
 module.exports.listingNewShowRoute = (req, res) => {
   res.render("listings/newListing.ejs");
 };
 
-module.exports.listingNewPostRoute = (req, res) => {
+module.exports.listingNewPostRoute =  (req, res) => {
     let url = req.file.path;
-    let fileName = req.file.filename;
+    let fileName =req.file.filename;
     let { title, description, price, location, country } = req.body;
-
+       
     const newListing = new Listing({
       title: title,
       description: description,
@@ -88,8 +89,8 @@ module.exports.listingEditRoute =  async (req, res, next) => {
       country: country,
     });
     if (typeof req.file !== "undefined") {
-      let url = req.file.path;
-      let fileName = req.file.fileName;
+      let url =  req.file.path;
+      let fileName =  req.file.fileName;
       upadateListing.image = { fileName, url };
       await upadateListing.save();
     }
