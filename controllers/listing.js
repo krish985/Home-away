@@ -5,7 +5,7 @@ module.exports.listingNewShowRoute = (req, res) => {
   res.render("listings/newListing.ejs");
 };
 
-module.exports.listingNewPostRoute = (req, res) => {
+module.exports.listingNewPostRoute = async (req, res) => {
   let url = req.file.path;
   let fileName = req.file.filename;
   let { title, description, price, location, country } = req.body;
@@ -20,15 +20,8 @@ module.exports.listingNewPostRoute = (req, res) => {
   });
   newListing.owner = req.user._id;
   newListing.image = { fileName, url };
-  newListing
-    .save()
-    .then((response) => {
-      console.log("data was saved");
-    })
-    .catch((err) => {
-      console.log("error");
-    });
-  req.flash("success", "hey,your listing added succesfully!");
+  await newListing.save()
+  req.flash("success", "hey your listing added succesfully!");
 
   res.redirect("/listing");
 };
