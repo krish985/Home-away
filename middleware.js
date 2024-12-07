@@ -6,8 +6,9 @@ module.exports.isLogedIn = (req, res, next) => {
   if (!req.isAuthenticated()) {
     req.flash("error", "you must have loged in");
     res.redirect("/login");
+  } else {
+    next();
   }
-  next();
 };
 
 module.exports.isReviewAuthor = asyncWrap(async (req, res, next) => {

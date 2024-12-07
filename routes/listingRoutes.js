@@ -13,7 +13,7 @@ const listingController = require("../controllers/listing.js");
 
 // add new listing route.
 
-router.get("/new", isLogedIn, asyncWrap(listingController.listingNewShowRoute));
+router.get("/new", isLogedIn,listingController.listingNewShowRoute);
 
 router.post(
   "/new",
