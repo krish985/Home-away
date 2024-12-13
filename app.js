@@ -34,7 +34,7 @@ app.use(
 );
 const store = MongoStore.create({
   mongoUrl:
-  process.env.MONGO_URL ||"mongodb+srv://krishkumar9810:yodZyBhVcpMSlwlK@cluster0.1xeyq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+  process.env.MONGO_URL,
   crypto: {
     secret: "mySuperSecretCode",
   },
@@ -74,7 +74,7 @@ app.use((req, res, next) => {
 
 // Established database connection.
 async function connectDb() {
-  const MONGO_URL = process.env.MONGO_URL || "mongodb+srv://krishkumar9810:yodZyBhVcpMSlwlK@cluster0.1xeyq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+  const MONGO_URL = process.env.MONGO_URL;
     await mongoose.connect(MONGO_URL);
 }
 

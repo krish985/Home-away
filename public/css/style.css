@@ -146,6 +146,87 @@ body {
   display: none;
 }
 
+/* entry page styling */
+
+.entry-container {
+  /* background-color: aqua; */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2.1rem;
+  margin-bottom: 2.1rem;
+}
+.entry-content {
+  /* background-color: blue; */
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.entry-content p {
+  font-size: 2rem;
+}
+.entry-content a {
+  text-decoration: none;
+  background-color: teal;
+  color: black;
+
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.entry-content a:hover {
+  transition: 0.8s;
+  background-color: rgb(175, 41, 175);
+  color: white;
+}
+.entry-img {
+  /* background-color: brown; */
+  width: 60%;
+}
+.entry-img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 3rem;
+}
+#element {
+  font-weight: 900;
+  font-size: 3rem;
+  color: rgb(218, 83, 83);
+}
+
+/* signup login page styling */
+.auth-form-div{
+  width: 70%;
+  height: 5rem;
+  
+}
+.auth-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+.auth-btn{
+  margin-top: 2rem;
+  height: 3rem !important;
+  width: 10rem !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* responsiveness for tablet */
 @media screen and (width <=1300px) {
   /* home listing */
@@ -193,6 +274,53 @@ body {
 
   .card-box-content {
     padding: 0.9rem;
+  }
+  /* entry page styling */
+
+  .entry-container {
+    /* background-color: aqua; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    margin-bottom: 2.1rem;
+  }
+  .entry-content {
+    /* background-color: blue; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  .entry-content p {
+    font-size: 2rem;
+  }
+  .entry-content a {
+    text-decoration: none;
+    background-color: teal;
+    color: black;
+
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+  .entry-img {
+    /* background-color: brown; */
+    width: 100%;
+    margin-top: 5rem;
+  }
+  .entry-img img {
+    width: 100%;
+    height: 22rem;
+    object-fit: cover;
+    border-radius: 3rem;
+  }
+  #element {
+    font-weight: 900;
+    font-size: 3rem;
+    color: rgb(218, 83, 83);
   }
 }
 
@@ -272,5 +400,51 @@ body {
 
   .card-box-content {
     padding: 0.9rem;
+  }
+  /* entry page styling */
+
+  .entry-container {
+    /* background-color: aqua; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    margin-bottom: 2.1rem;
+  }
+  .entry-content {
+    /* background-color: blue; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .entry-content p {
+    font-size: 1.5rem;
+  }
+  .entry-content a {
+    text-decoration: none;
+    background-color: teal;
+    color: black;
+
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+  .entry-img {
+    /* background-color: brown; */
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .entry-img img {
+    width: 100%;
+    height: 22rem;
+    object-fit: cover;
+    border-radius: 3rem;
+  }
+  #element {
+    font-weight: 900;
+    font-size: 2rem;
+    color: rgb(218, 83, 83);
   }
 }
