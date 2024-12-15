@@ -62,7 +62,7 @@ body {
 
 .card-box-responsive {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
   /* background-color: #e51d53; */
