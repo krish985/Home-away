@@ -1,53 +1,48 @@
 <% layout('layouts/boilerplate') -%>
 <body>
-  <div class="row">
-    <div class="col-8 offset-2">
-      <h2>Listing details</h2>
-
-      <div class="card">
-        <img
-          class="show-card-img"
-          src="<%= listing.image.url %>"
-          class="card-img-top"
-          alt="individual-listing"
-        />
-        <div class="card-body">
-          <p class="card-text">
-            <b>Owned By : <%= owner %></b>
-          </p>
-          <p class="card-text">
-            <b><%= listing.title %></b>
-          </p>
-          <p><%= listing.description %></p>
-          <p>&#8377; <%= listing.price.toLocaleString('en-IN') %></p>
-          <p><%= listing.location %></p>
-          <p><%= listing.country %></p>
+    <div class="card individual-card-main-container">
+      <img
+        class="show-card-img"
+        src="<%= listing.image.url %>"
+        alt="individual-listing"
+      />
+    </div>
+      <div class="card-body individual-card-text-container">
+        <p class="card-text">
+          <b>Owned By : <%= owner %></b>
+        </p>
+        <p class="card-text">
+          <b><%= listing.title %></b>
+        </p>
+        <p><%= listing.description %></p>
+        <p><i class="fa-solid fa-indian-rupee-sign"></i> <%= listing.price.toLocaleString('en-IN') %></p>
+        <p><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;<%= listing.location %></p>
+        <p><i class="fa-solid fa-globe"></i>&nbsp;&nbsp;<%= listing.country %></p>
         </div>
-      </div>
+     <!-- edit and delete btn -->
       <% if (currUser && currUser._id.equals(listing.owner._id)) { %>
-      <div class="row">
+      <div class="ind-card-edit-btn">
         <form
-          class="col-1"
+          class=""
           method="get"
           action="/listing/<%= listing._id %>/edit"
         >
-          <button class="btn btn-dark">Edit</button>
+          <button class="btn btn-outline-dark">Edit </button>
         </form>
         <br />
         <form
-          class="col-1"
+          class=""
           method="post"
           action="/listing/<%= listing._id %>/delete?_method=DELETE"
         >
-          <button class="btn btn-danger">Delete</button>
+          <button class="btn btn-outline-danger">Delete</button>
         </form>
       </div>
       <% } %>
-    </div>
-  </div>
-  <div class="row mt-4 col-8 offset-2">
-    
+
     <hr />
+
+    <div class="feedback-container-form">
     <h2>Leave a feedback</h2>
     <form method="post" action="/listing/<%= listing._id %>/reviews">
       <fieldset class="starability-basic">
@@ -72,28 +67,29 @@
         <label for="first-rate5" title="Amazing">5 stars</label>
       </fieldset>
 
-      <div class="row mt-3 mb-3">
-        <label class="form-label" for="comment">leave your comment</label>
+      <div class="">
+        <label class="form-label" for="comment">Leave your comment</label>
         <textarea
           placeholder="your feedback is valuable."
           rows="4"
-          class="form-control"
+          class="form-control feedback-textarea"
           name="comment"
           id="comment"
         ></textarea>
-      </div>
+      </div> <br>
 
       <button class="btn btn-outline-dark">submit</button>
     </form>
-    
+  </div>
 
-    <div class="row mt-4">
-      <hr />
-      <h2>All reveiws</h2>
-      <br /><br />
+
+<!-- seperate -->
+<hr />
+<h2 style="text-align: center;margin: 1rem 0 1rem 0 ;">All reveiws</h2>
+    <div class="all-review">
 
       <% for(review of listing.reviews) {%>
-      <div class="card col-7 reveiw-card">
+      <div class="card reveiw-card">
         <h4>@<%= review.author.username %></h4>
         <p class="card-text"><%= review.feedback%></p>
         <p class="starability-result" data-rating="<%= review.rating %>">
@@ -108,5 +104,7 @@
       </div>
       <% }%>
     </div>
-  </div>
+  
+
+
 </body>

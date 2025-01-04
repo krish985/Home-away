@@ -1,6 +1,6 @@
 <% layout('layouts/boilerplate') -%>
 <body>
-  <div class="row">
+  <div style="margin-top: 2rem;" class="row">
     <div class="col-8 offset-2">
       <h2>Edit listing</h2>
       <form method="post" action="/listing/<%= listing._id %>?_method=PUT" class="needs-validation" novalidate enctype="multipart/form-data">
@@ -24,7 +24,7 @@
           ><br />
         </div>
         <div class="">
-         <img style="border-radius: 1rem;" src="<%= imageTransformation %>" alt="">
+         <!-- <img style="border-radius: 1rem;" src="<%= imageTransformation %>" alt=""> -->
         </div>
         <div class="">
           <label class="form-label" for="image">Upload Image</label><br />

@@ -95,23 +95,69 @@ body {
 
 /* individual listing */
 
+.individual-card-main-container{
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+.individual-card-text-container{
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.2rem;
+
+}
 .show-card-img {
   height: 25rem;
-  width: 50rem;
+  width: 60%;
   border-radius: 1.5rem;
 }
 
+.ind-card-edit-btn{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  
+}
+.feedback-container-form{
+  /* background-color: #e51d53; */
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.feedback-textarea{
+  width: 80%;
+  margin: auto;
+}
+.starability-basic{
+  margin: auto;
+  margin-top: 1rem;
+}
 /* review card */
-
-.reveiw-card {
-  border: 2px solid grey !important;
-  border-radius: 1.5rem;
-  padding-left: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: #dec6cd;
-  color: black;
+.all-review{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
+.reveiw-card {
+  border: 5px solid grey !important;
+  border-radius: 1.5rem;
+  padding: 1rem 0 1rem 2rem;
+  background-color: rgba(235, 178, 178, 0.555);
+  color: black;
+  width: 40%;
+}
+
+
+
+
+
+
+
 
 /* home page icon section */
 
@@ -326,6 +372,23 @@ body {
     font-size: 3rem;
     color: rgb(218, 83, 83);
   }
+
+  /* individual listing */
+
+.individual-card-main-container{
+  margin-top: 1.5rem;
+ 
+}
+.individual-card-text-container{
+  letter-spacing: 0.2rem;
+
+}
+
+.show-card-img {
+  height: 25rem;
+  width: 100%;
+  border-radius: 1.5rem;
+}
 }
 
 /* responsivness for mobile */
@@ -451,4 +514,33 @@ body {
     font-size: 2rem;
     color: rgb(218, 83, 83);
   }
+
+  /* individual listing */
+
+
+.show-card-img {
+  height: 23rem;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+.feedback-textarea{
+  width: 95%;
+  margin: auto;
+}
+
+/* review card */
+.all-review{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.reveiw-card {
+  border: 4px solid grey !important;
+  border-radius: 1.5rem;
+  padding: 1rem 0 1rem 2rem;
+  background-color: rgba(235, 178, 178, 0.555);
+  color: black;
+  width: 90%;
+}
+
 }

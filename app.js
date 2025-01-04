@@ -74,7 +74,7 @@ app.use((req, res, next) => {
 
 // Established database connection.
 async function connectDb() {
-  const MONGO_URL = process.env.MONGO_URL;
+  const MONGO_URL = process.env.MONGO_URL ;
     await mongoose.connect(MONGO_URL);
 }
 
